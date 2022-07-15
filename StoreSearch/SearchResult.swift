@@ -7,12 +7,16 @@
 
 import Foundation
 
+func < (lhs: SearchResult, rhs: SearchResult) -> Bool {
+    return lhs.name.localizedStandardCompare(rhs.name) == .orderedAscending
+}
+
 class ResultArray: Codable {
     var resultCount = 0
     var results = [SearchResult]()
 }
 
-class SearchResult: Codable, CustomStringConvertible {    
+class SearchResult: Codable, CustomStringConvertible {
     var artistName: String? = ""
     var trackName: String? = ""
     var kind: String? = ""

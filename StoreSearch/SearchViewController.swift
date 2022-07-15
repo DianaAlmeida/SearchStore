@@ -51,7 +51,6 @@ class SearchViewController: UIViewController {
             return nil
         }
     }
-    
     func parse(data: Data) -> [SearchResult] {
         do {
             let decoder = JSONDecoder()
@@ -93,11 +92,10 @@ extension SearchViewController: UISearchBarDelegate {
             print("URL: '\(url)'")
             
             if let data = performStoreRequest(with: url) {
-                searchResults.sort { result1, result2 in
-                    return result1.name.localizedStandardCompare(result2.name) == .orderedAscending
-                }
                 searchResults = parse(data: data)
+                searchResults.sort(by: <)
             }
+            
             tableView.reloadData()
         }
     }
