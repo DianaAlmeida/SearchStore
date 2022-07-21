@@ -25,6 +25,11 @@ class DetailViewController: UIViewController {
         
         popupView.layer.cornerRadius = 10
         
+        view.backgroundColor = UIColor.clear
+        let dimmingView = GradientView(frame: CGRect.zero)
+        dimmingView.frame = view.bounds
+        view.insertSubview(dimmingView, at: 0)
+        
         let gestureRecognizer = UITapGestureRecognizer(
             target: self,
             action: #selector(close))
