@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F24C33928998F1D001E9BA6 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F24C33828998F1D001E9BA6 /* UIImage+Resize.swift */; };
 		2F703696287D9A2100AA0D6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F703695287D9A2100AA0D6E /* AppDelegate.swift */; };
 		2F703698287D9A2100AA0D6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F703697287D9A2100AA0D6E /* SceneDelegate.swift */; };
 		2F70369A287D9A2100AA0D6E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F703699287D9A2100AA0D6E /* SearchViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F24C33828998F1D001E9BA6 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		2F703692287D9A2100AA0D6E /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F703695287D9A2100AA0D6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F703697287D9A2100AA0D6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				2FC23A5F28899CE600AD289B /* SlideOutAnimationController.swift */,
 				2FC23A61288AAEF000AD289B /* LandscapeViewController.swift */,
 				2FFBCF7128941CDC00D149D3 /* FadeOutAnimationController.swift */,
+				2F24C33828998F1D001E9BA6 /* UIImage+Resize.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				2FFBCF7228941CDC00D149D3 /* FadeOutAnimationController.swift in Sources */,
 				2FC23A582887140E00AD289B /* UIImageView+DownloadImage.swift in Sources */,
 				2F7036AA287DB8CE00AA0D6E /* SearchResult.swift in Sources */,
+				2F24C33928998F1D001E9BA6 /* UIImage+Resize.swift in Sources */,
 				2FC23A5E28898D5500AD289B /* BounceAnimationController.swift in Sources */,
 				2FC23A62288AAEF000AD289B /* LandscapeViewController.swift in Sources */,
 				2F703698287D9A2100AA0D6E /* SceneDelegate.swift in Sources */,

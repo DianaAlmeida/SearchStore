@@ -14,6 +14,7 @@ class LandscapeViewController: UIViewController {
     
     var searchResults = [SearchResult]()
     
+    private var downloads = [URLSessionDownloadTask]()
     private var firstTime = true
     
     override func viewDidLoad() {
@@ -32,6 +33,8 @@ class LandscapeViewController: UIViewController {
         scrollView.translatesAutoresizingMaskIntoConstraints = true
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "LandscapeBackground")!)
+        
+        pageControl.numberOfPages = 0
     }
     
     override func viewWillLayoutSubviews() {
@@ -48,6 +51,28 @@ class LandscapeViewController: UIViewController {
             firstTime = false
             tileButtons(searchResults)
         }
+    }
+    
+    deinit {
+        print("deinit \(self)")
+        for task in downloads {
+            task.cancel()
+        }
+    }
+    
+    // MARK: - Actions
+    @IBAction func pageChanged(_ sender: UIPageControl) {
+        UIView.animate(
+            withDuration: 0.3,
+            delay: 0,
+            options: [.curveEaseInOut],
+            animations: {
+                self.scrollView.contentOffset = CGPoint(
+                        x: self.scrollView.bounds.size.width * CGFloat(sender.currentPage),
+                        y: 0)
+            }, completion: nil)
+        
+        
     }
     
     // MARK: - Private Methods
@@ -78,10 +103,9 @@ class LandscapeViewController: UIViewController {
         var column = 0
         var x = marginX
         for (index, result) in searchResults.enumerated() {
-            let button = UIButton(type: .system)
-            button.backgroundColor = UIColor.white
-            button.setTitle("\(index)", for: .normal)
-            
+            let button = UIButton(type: .custom)
+            button.setBackgroundImage(UIImage(named: "LandscapeButton"), for: .normal)
+            downloadImage(for: result, andPlaceOn: button)
             button.frame = CGRect(
                 x: x + paddingHorz,
                 y: marginY + CGFloat(row) * itemHeight + paddingVert,
@@ -107,5 +131,36 @@ class LandscapeViewController: UIViewController {
             height: scrollView.bounds.size.height)
         
         print("Number of pages: \(numPages)")
+        
+        pageControl.numberOfPages = numPages
+        pageControl.currentPage = 0
+    }
+    
+    private func downloadImage(for searchResult: SearchResult, andPlaceOn button: UIButton) {
+        if let url = URL(string: searchResult.imageSmall) {
+            let task = URLSession.shared.downloadTask(with: url) {
+                [weak button] url, _, error in
+                if error == nil, let url = url,
+                   let data = try? Data(contentsOf: url),
+                   let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        if let button = button {
+                            let imageResize = image.resize(withBounds: CGSize(width: 68, height: 68))
+                            button.setImage(imageResize, for: .normal)
+                        }
+                    }
+                }
+            }
+            task.resume()
+            downloads.append(task)
+        }
+    }
+}
+
+extension LandscapeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let width = scrollView.bounds.size.width
+        let page = Int((scrollView.contentOffset.x + width / 2) / width)
+        pageControl.currentPage = page
     }
 }
