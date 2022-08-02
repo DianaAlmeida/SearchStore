@@ -18,14 +18,15 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var priceButton: UIButton!
     
     var searchResult: SearchResult!
-    var downloadTask:URLSessionDownloadTask?
+    
+    private var downloadTask: URLSessionDownloadTask?
     
     enum AnimationStyle {
         case slide
         case fade
     }
     
-    var dismissStyle = AnimationStyle.fade
+    private var dismissStyle = AnimationStyle.fade
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

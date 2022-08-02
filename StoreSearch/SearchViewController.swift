@@ -13,12 +13,13 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    var landscapeVC: LandscapeViewController?
-    var searchResults = [SearchResult]()
-    var dataTask: URLSessionDataTask?
-    var hasSearched = false
-    var isLoading = false
+    private var landscapeVC: LandscapeViewController?
+    private var dataTask: URLSessionDataTask?
+    private var hasSearched = false
+    private var isLoading = false
     
+    var searchResults = [SearchResult]()
+
     struct TableView {
         struct CellIdentifiers {
             static let searchResultCell = "SearchResultCell"
@@ -168,6 +169,7 @@ class SearchViewController: UIViewController {
         landscapeVC = storyboard!.instantiateViewController(
             withIdentifier: "LandscapeViewController") as? LandscapeViewController
         if let controller = landscapeVC {
+            controller.searchResults = searchResults
             controller.view.frame = view.bounds
             controller.view.alpha = 0
             
