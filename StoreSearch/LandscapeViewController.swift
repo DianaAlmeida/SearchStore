@@ -51,8 +51,10 @@ class LandscapeViewController: UIViewController {
             firstTime = false
             
             switch search.state {
-            case .notSearchedYet, .loading, .noResults:
+            case .notSearchedYet, .noResults:
                 break
+            case .loading:
+                showSpinner()
             case .results(let list):
                 tileButtons(list)
             }
@@ -81,7 +83,29 @@ class LandscapeViewController: UIViewController {
         
     }
     
+    //MARK: - Helper Methods
+    func searchResultsReceived() {
+        hideSpinner()
+        
+        switch search.state {
+        case .notSearchedYet, .loading, .noResults:
+            break
+        case .results(let list):
+            tileButtons(list)
+        }
+    }
+    
     // MARK: - Private Methods
+    private func showSpinner() {
+        let spinner = UIActivityIndicatorView(style: .large)
+        spinner.center = CGPoint(
+            x: scrollView.bounds.midX + 0.5,
+            y: scrollView.bounds.midY + 0.5)
+        spinner.tag = 1000
+        view.addSubview(spinner)
+        spinner.startAnimating()
+    }
+    
     private func tileButtons(_ searchResults: [SearchResult]) {
         let itemWidth: CGFloat = 94
         let itemHeight: CGFloat = 88
@@ -160,6 +184,10 @@ class LandscapeViewController: UIViewController {
             task.resume()
             downloads.append(task)
         }
+    }
+    
+    private func hideSpinner() {
+        view.viewWithTag(1000)?.removeFromSuperview()
     }
 }
 

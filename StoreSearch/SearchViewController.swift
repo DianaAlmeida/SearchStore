@@ -81,6 +81,7 @@ class SearchViewController: UIViewController {
                         self.showNetworkError()
                     }
                     self.tableView.reloadData()
+                    self.landscapeVC?.searchResultsReceived()
                 }
             tableView.reloadData()
             searchBar.resignFirstResponder()
