@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2F24C33928998F1D001E9BA6 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F24C33828998F1D001E9BA6 /* UIImage+Resize.swift */; };
+		2F317C50289D2C4A00390EC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F317C52289D2C4A00390EC0 /* Localizable.strings */; };
+		2F317C56289D357A00390EC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F317C58289D357A00390EC0 /* InfoPlist.strings */; };
 		2F703696287D9A2100AA0D6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F703695287D9A2100AA0D6E /* AppDelegate.swift */; };
 		2F703698287D9A2100AA0D6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F703697287D9A2100AA0D6E /* SceneDelegate.swift */; };
 		2F70369A287D9A2100AA0D6E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F703699287D9A2100AA0D6E /* SearchViewController.swift */; };
@@ -31,6 +33,10 @@
 /* Begin PBXFileReference section */
 		2F24C33828998F1D001E9BA6 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		2F317C4D289D284F00390EC0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
+		2F317C51289D2C4A00390EC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2F317C53289D2F6000390EC0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2F317C57289D357A00390EC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2F317C59289D357C00390EC0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F703692287D9A2100AA0D6E /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F703695287D9A2100AA0D6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F703697287D9A2100AA0D6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +75,8 @@
 		2F703689287D9A2100AA0D6E = {
 			isa = PBXGroup;
 			children = (
+				2F317C58289D357A00390EC0 /* InfoPlist.strings */,
+				2F317C52289D2C4A00390EC0 /* Localizable.strings */,
 				2F703694287D9A2100AA0D6E /* StoreSearch */,
 				2F703693287D9A2100AA0D6E /* Products */,
 			);
@@ -201,6 +209,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F70369F287D9A2200AA0D6E /* Assets.xcassets in Resources */,
+				2F317C56289D357A00390EC0 /* InfoPlist.strings in Resources */,
+				2F317C50289D2C4A00390EC0 /* Localizable.strings in Resources */,
 				2FAAA226289D122F009D91D1 /* LoadingCell.xib in Resources */,
 				2F7036AC287ED1A700AA0D6E /* SearchResultCell.xib in Resources */,
 				2FAAA222289D0E02009D91D1 /* NothingFoundCell.xib in Resources */,
@@ -235,6 +245,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		2F317C52289D2C4A00390EC0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F317C51289D2C4A00390EC0 /* en */,
+				2F317C53289D2F6000390EC0 /* nl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		2F317C58289D357A00390EC0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F317C57289D357A00390EC0 /* en */,
+				2F317C59289D357C00390EC0 /* nl */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		2F70369B287D9A2100AA0D6E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

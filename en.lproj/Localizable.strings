@@ -1,0 +1,61 @@
+/* 
+  Localizable.strings
+  StoreSearch
+
+  Created by Diana Almeida on 05/08/2022.
+  
+*/
+
+/* Format for artist name */
+"%@ (%@)" = "%1$@ (%2$@)";
+
+/* Localized kind: Album */
+"Album" = "Album";
+
+/* Localized kind: Software */
+"App" = "App";
+
+/* Localized kind: Audio Book */
+"Audio Book" = "Audio Book";
+
+/* Localized kind: Book */
+"Book" = "Book";
+
+/* Localized kind: E-Book */
+"E-Book" = "E-Book";
+
+/* Price - free */
+"Free" = "Free";
+
+/* Localized kind: Feature Movie */
+"Movie" = "Movie";
+
+/* Localized kind: Music Video */
+"Music Video" = "Music Video";
+
+/* Nothing Found for search */
+"Nothing Found" = "Nothing Found";
+
+/* OK button title */
+"OK" = "OK";
+
+/* Localized kind: Podcast */
+"Podcast" = "Podcast";
+
+/* Localized kind: Song */
+"Song" = "Song";
+
+/* Network error alert message */
+"There was an error accessing the iTunes Store. Please try again." = "There was an error accessing the iTunes Store. Please try again.";
+
+/* Localized kind: TV Episode */
+"TV Episode" = "TV Episode";
+
+/* Unknown artist */
+"Unknown" = "Unknown";
+
+/* Network error alert title */
+"Whoops..." = "Whoops...";
+
+/* Format for artist name label */
+"ARTIST_NAME_LABEL_FORMAT" = "%1$@ (%2$@)";
