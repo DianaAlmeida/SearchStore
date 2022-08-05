@@ -82,28 +82,60 @@
 		2F703694287D9A2100AA0D6E /* StoreSearch */ = {
 			isa = PBXGroup;
 			children = (
+				2FAAA221289D0BF3009D91D1 /* Helpers */,
+				2FAAA21E289D0A0D009D91D1 /* Data Models */,
+				2FAAA21C289D09EB009D91D1 /* View Controller */,
 				2F703695287D9A2100AA0D6E /* AppDelegate.swift */,
-				2F703697287D9A2100AA0D6E /* SceneDelegate.swift */,
-				2F703699287D9A2100AA0D6E /* SearchViewController.swift */,
 				2F70369B287D9A2100AA0D6E /* Main.storyboard */,
+				2F703697287D9A2100AA0D6E /* SceneDelegate.swift */,
 				2F70369E287D9A2200AA0D6E /* Assets.xcassets */,
 				2F7036A3287D9A2200AA0D6E /* Info.plist */,
+			);
+			path = StoreSearch;
+			sourceTree = "<group>";
+		};
+		2FAAA21C289D09EB009D91D1 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2FAAA220289D0B62009D91D1 /* Cells */,
+				2F703699287D9A2100AA0D6E /* SearchViewController.swift */,
+				2FC23A592888101B00AD289B /* DetailViewController.swift */,
+				2FC23A61288AAEF000AD289B /* LandscapeViewController.swift */,
+				2FC23A5D28898D5500AD289B /* BounceAnimationController.swift */,
+				2FC23A5F28899CE600AD289B /* SlideOutAnimationController.swift */,
+				2FFBCF7128941CDC00D149D3 /* FadeOutAnimationController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		2FAAA21E289D0A0D009D91D1 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				2FAAA21A289A7F0F009D91D1 /* Search.swift */,
 				2F7036A9287DB8CE00AA0D6E /* SearchResult.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		2FAAA220289D0B62009D91D1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
 				2F7036AB287ED1A700AA0D6E /* SearchResultCell.xib */,
 				2FFE0E70287EDF370005E25D /* SearchResultCell.swift */,
 				2FFE0E72287EE4640005E25D /* NothingFoundCell.xib */,
 				2FFE0E742881B0930005E25D /* LoadingCell.xib */,
-				2FC23A572887140E00AD289B /* UIImageView+DownloadImage.swift */,
-				2FC23A592888101B00AD289B /* DetailViewController.swift */,
-				2FC23A5B2889613B00AD289B /* GradientView.swift */,
-				2FC23A5D28898D5500AD289B /* BounceAnimationController.swift */,
-				2FC23A5F28899CE600AD289B /* SlideOutAnimationController.swift */,
-				2FC23A61288AAEF000AD289B /* LandscapeViewController.swift */,
-				2FFBCF7128941CDC00D149D3 /* FadeOutAnimationController.swift */,
-				2F24C33828998F1D001E9BA6 /* UIImage+Resize.swift */,
-				2FAAA21A289A7F0F009D91D1 /* Search.swift */,
 			);
-			path = StoreSearch;
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2FAAA221289D0BF3009D91D1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2FC23A572887140E00AD289B /* UIImageView+DownloadImage.swift */,
+				2F24C33828998F1D001E9BA6 /* UIImage+Resize.swift */,
+				2FC23A5B2889613B00AD289B /* GradientView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
