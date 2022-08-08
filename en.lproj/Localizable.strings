@@ -59,3 +59,6 @@
 
 /* Format for artist name label */
 "ARTIST_NAME_LABEL_FORMAT" = "%1$@ (%2$@)";
+
+/* Search View controller title */
+"Search" = "Search";

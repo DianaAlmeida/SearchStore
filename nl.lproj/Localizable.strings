@@ -47,3 +47,5 @@
 /* Format for artist name label */
 "ARTIST_NAME_LABEL_FORMAT" = "%2$@ van %1$@";
 
+/* Search View controller title */
+"Search" = "Zoeken";
